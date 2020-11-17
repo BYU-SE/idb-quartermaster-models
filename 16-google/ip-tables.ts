@@ -1,4 +1,4 @@
-import { Event, WrappedStage } from "../../src";
+import { Event, WrappedStage } from "@byu-se/quartermaster";
 
 export class Iptables extends WrappedStage {
   public allowInboudTraffic: boolean = true;

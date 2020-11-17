@@ -1,4 +1,4 @@
-import { Event, TimedDependency, FIFOQueue } from "../../src";
+import { Event, TimedDependency, FIFOQueue } from "@byu-se/quartermaster";
 import { Cluster } from "./database"
 
 export class Balancer extends TimedDependency {

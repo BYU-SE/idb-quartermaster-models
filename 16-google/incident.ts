@@ -13,10 +13,10 @@ import {
   metronome,
   simulation,
   stats,
-  eventSummary, 
+  eventSummary,
   stageSummary,
   Timeout
-} from "../../src";
+} from "@byu-se/quartermaster";
 import { Cluster, Server } from "./database"
 import { Balancer } from "./balancer";
 import { Iptables } from "./ip-tables";
@@ -75,17 +75,17 @@ function breakServer() {
 
 //Changes availability of ip-tables stage
 function puppetConfigChange() {
-    ip.allowInboudTraffic = false;
+  ip.allowInboudTraffic = false;
 }
 
 //Reverts availability of ip-tables stage
 function revertPuppetConfigChange() {
-    ip.allowInboudTraffic = true;
+  ip.allowInboudTraffic = true;
 }
 
 //Initiates network congestion in the load balancer, i.e. cluster management software.
 function balancerCapacityChange() {
-    bal.queueCapacity = 5;
+  bal.queueCapacity = 5;
 }
 
 //stats
