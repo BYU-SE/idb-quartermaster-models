@@ -1,4 +1,4 @@
-import { Stage, Event, FIFOQueue, TimedDependency } from "../../src";
+import { Stage, Event, FIFOQueue, TimedDependency } from "@byu-se/quartermaster";
 
 export class Cluster extends Stage {
   constructor(protected cluster: Server[]) {
